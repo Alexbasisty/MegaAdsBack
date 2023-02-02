@@ -1,4 +1,4 @@
-# Backed for Mega-Ads App
+# Backend for Mega-Ads App
 
 [Here will be a description]
 
