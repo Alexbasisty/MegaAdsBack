@@ -13,7 +13,7 @@ app.use(cors({
 app.use(json());
 app.use(rateLimit({
     windowMs: 5 * 60 * 1000,
-    max: 100,
+    max: 300,
 }));
 
 app.get('/', async (req, res) => {

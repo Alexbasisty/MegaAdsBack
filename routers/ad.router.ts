@@ -11,7 +11,7 @@ export const adRouter = Router()
     .get('/:id', async (req: Request, res: Response) => {
         const ad = await AdRecord.getOne(req.params.id);
 
-        res.json(ad)
+        res.json(ad);
     })
 
     .post('/', async (req: Request, res: Response) => {

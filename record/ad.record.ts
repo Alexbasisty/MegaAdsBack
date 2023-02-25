@@ -71,7 +71,8 @@ export class AdRecord implements AdEntity {
         } else {
             throw new Error('Cannot insert smth that is already inserted')
         }
-
-        await pool.execute("INSERT INTO `ads`(`id`, `name`, description`, `price`, `url`, `lat`, `lon`) VALUES(:id, :name, :description, :price, :url, :lat, :lon)", this)
+        console.log(this);
+        
+        await pool.execute("INSERT INTO `ads`(`id`, `name`, `description`, `price`, `url`, `lat`, `lon`) VALUES(:id, :name, :description, :price, :url, :lat, :lon)", this)
     }
 }
