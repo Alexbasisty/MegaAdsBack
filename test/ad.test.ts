@@ -45,3 +45,18 @@ test('AdRecord.findAll returns smaller amount of data',async () => {
     expect((ads[0] as AdEntity).price).toBeUndefined();
     expect((ads[0] as AdEntity).description).toBeUndefined();
 });
+
+test('AdRecord.insert inserts returns new UUID',async () => {
+    const ad = new AdRecord({
+        name: 'Test Name',
+        description: 'blah',
+        url: 'https://megaKurs',
+        price: 0,
+        lat: 9,
+        lon: 9,
+    });
+
+    await ad.insert();
+
+    expect(ad.id).toBeDefined();
+});
